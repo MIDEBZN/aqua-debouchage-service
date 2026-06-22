@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Plombier & Déboucheur 24/7" description="Aqua Débouchage Service: Votre expert en débouchage d'urgence et plomberie à Bruxelles. Intervention rapide garantie.">
+  
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">Urgence 24h/24 & 7j/7</div>
+        <h1>Expert en <span class="highlight">Débouchage</span> et Plomberie à Bruxelles</h1>
+        <p>Intervention rapide en moins de 30 minutes. Tarifs transparents et travail garanti pour tous vos problèmes de canalisations bouchées ou fuites d'eau.</p>
+        <div class="hero-actions">
+          <a href="tel:+32000000000" class="btn btn-primary btn-large">Appeler Maintenant</a>
+          <a href="/contact" class="btn btn-secondary btn-large">Demander un Devis</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="blob-bg"></div>
+        <img src="https://images.unsplash.com/photo-1607472586893-edb57cbce4ea?auto=format&fit=crop&q=80&w=800" alt="Plombier professionnel au travail" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Nos Services de <span class="highlight">Qualité</span></h2>
+        <p>Des solutions professionnelles pour tous vos problèmes de plomberie</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚽</div>
+          <h3>Débouchage WC & Éviers</h3>
+          <p>Intervention immédiate pour tout type de bouchon. Équipement professionnel pour un résultat durable.</p>
+          <a href="/services" class="service-link">En savoir plus &rarr;</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📷</div>
+          <h3>Inspection Caméra</h3>
+          <p>Diagnostic précis de vos canalisations par inspection vidéo pour localiser les problèmes avec exactitude.</p>
+          <a href="/services" class="service-link">En savoir plus &rarr;</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Réparation Fuites</h3>
+          <p>Recherche et réparation rapide de toutes vos fuites d'eau pour éviter les dégâts majeurs.</p>
+          <a href="/services" class="service-link">En savoir plus &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container features-container">
+      <div class="features-image">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800" alt="Camionnette de service plomberie" class="rounded-img" />
+      </div>
+      <div class="features-content">
+        <h2>Pourquoi Choisir <span class="highlight">Aqua Débouchage</span> ?</h2>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">⚡</div>
+            <div>
+              <h4>Intervention Ultra Rapide</h4>
+              <p>Nous sommes sur place en moins de 30 minutes à Bruxelles et ses environs.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">💶</div>
+            <div>
+              <h4>Tarifs Transparents</h4>
+              <p>Pas de mauvaises surprises, un devis clair est établi avant toute intervention.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🏆</div>
+            <div>
+              <h4>Travail Garanti</h4>
+              <p>Tous nos techniciens sont qualifiés et notre travail est garanti à 100%.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, rgba(244, 247, 246, 0.8) 0%, rgba(255,255,255,1) 100%);
+    padding: 6rem 2rem;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 168, 255, 0.1);
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+  }
+
+  .highlight {
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0, 168, 255, 0.3);
+    z-index: -1;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blob-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: blob 8s ease-in-out infinite alternate;
+    z-index: 0;
+    opacity: 0.1;
+  }
+
+  @keyframes blob {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Services Preview */
+  .services-preview {
+    background-color: white;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--color-background-alt);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 68, 204, 0.1);
+    background: white;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .service-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: gap 0.3s ease;
+  }
+
+  .service-link:hover {
+    gap: 5px;
+  }
+
+  /* Features */
+  .features {
+    background-color: var(--color-background-alt);
+  }
+
+  .features-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .features-image, .features-content {
+    flex: 1;
+  }
+
+  .rounded-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .features-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .feature-list li {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    background: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+  }
+
+  .feature-list h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .feature-list p {
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container, .features-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    .hero p {
+      margin: 0 auto 2.5rem;
+    }
+    .hero-actions {
+      justify-content: center;
+    }
+    .feature-list li {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-actions {
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  }
+</style>

@@ -1,0 +1,141 @@
+---
+const navItems = [
+  { href: "/", label: "Accueil" },
+  { href: "/services", label: "Services" },
+  { href: "/locations", label: "Zones d'Intervention" },
+  { href: "/about", label: "À Propos" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <span class="logo-icon">💧</span>
+      <span class="logo-text">Aqua Débouchage</span>
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        {navItems.map((item) => (
+          <li><a href={item.href} class="nav-link">{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <a href="tel:+32000000000" class="btn btn-primary header-cta">Urgence 24/7</a>
+    <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 48, 135, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+
+  .mobile-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  @media (max-width: 992px) {
+    .nav-list {
+      display: none;
+    }
+    .header-cta {
+      display: none;
+    }
+    .mobile-menu-toggle {
+      display: flex;
+    }
+  }
+</style>

@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="À Propos" description="Découvrez l'histoire et les valeurs d'Aqua Débouchage Service. Plus de 15 ans d'expérience au service de votre plomberie à Bruxelles.">
+  
+  <div class="page-header">
+    <div class="container text-center">
+      <h1>À Propos de <span class="highlight">Nous</span></h1>
+      <p class="subtitle">Une équipe d'experts passionnés par leur métier, à votre service 24h/24.</p>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Notre <span class="highlight">Histoire</span></h2>
+          <p>Fondée il y a plus de 15 ans, <strong>Aqua Débouchage Service</strong> est née d'une volonté simple : offrir un service de dépannage en plomberie et débouchage rapide, honnête et de haute qualité à tous les Bruxellois.</p>
+          <p>Au fil des années, nous avons grandi pour devenir l'une des entreprises les plus réputées de la capitale, intervenant chez des milliers de particuliers et professionnels.</p>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Années d'expérience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5000+</span>
+              <span class="stat-label">Interventions réussies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Clients satisfaits</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" alt="Équipe de plombiers" class="rounded-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Nos <span class="highlight">Valeurs</span></h2>
+        <p class="subtitle">Ce qui fait notre force au quotidien.</p>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Réactivité</h3>
+          <p>Dans l'urgence, chaque minute compte. Nous nous engageons à intervenir dans les plus brefs délais.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">🛡️</div>
+          <h3>Intégrité</h3>
+          <p>Nos tarifs sont clairs et annoncés à l'avance. Pas de frais cachés, pas de mauvaises surprises.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">⭐</div>
+          <h3>Excellence</h3>
+          <p>Nous utilisons le meilleur matériel et formons continuellement nos techniciens aux dernières techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--color-background-alt);
+    padding: 6rem 2rem 4rem;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .rounded-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+
+  .values-section {
+    background-color: var(--color-background-alt);
+  }
+
+  .mb-5 {
+    margin-bottom: 4rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .value-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .value-card h3 {
+    margin-bottom: 1rem;
+  }
+
+  .value-card p {
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .stats {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nos Services" description="Découvrez tous nos services de plomberie et débouchage à Bruxelles. Inspection caméra, débouchage haute pression, réparation de fuites.">
+  
+  <div class="page-header">
+    <div class="container text-center">
+      <h1>Nos <span class="highlight">Services</span></h1>
+      <p class="subtitle">Une gamme complète de solutions pour tous vos problèmes de plomberie</p>
+    </div>
+  </div>
+
+  <section class="services-list">
+    <div class="container">
+      
+      <div class="service-detail" id="debouchage">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800" alt="Débouchage de canalisation" class="rounded-img" />
+        </div>
+        <div class="service-info">
+          <h2>Débouchage Canalisation</h2>
+          <p>Nous utilisons des équipements de pointe pour éliminer rapidement et efficacement tout type de bouchon. Que ce soit pour un évier, un WC, une baignoire ou les égouts principaux, nous avons la solution adaptée.</p>
+          <ul>
+            <li>Débouchage haute pression (hydrocurage)</li>
+            <li>Débouchage mécanique avec furet électrique</li>
+            <li>Nettoyage préventif des canalisations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail reverse" id="inspection">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1590483863484-91f16bf494a8?auto=format&fit=crop&q=80&w=800" alt="Inspection caméra canalisation" class="rounded-img" />
+        </div>
+        <div class="service-info">
+          <h2>Inspection Caméra</h2>
+          <p>L'inspection vidéo permet de localiser précisément l'origine du problème sans avoir à casser ou creuser inutilement. C'est la méthode la plus fiable pour un diagnostic exact.</p>
+          <ul>
+            <li>Localisation de bouchons récalcitrants</li>
+            <li>Détection de fissures ou cassures</li>
+            <li>Vérification de l'état général du réseau</li>
+            <li>Rapport d'inspection détaillé fourni</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail" id="reparation">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=800" alt="Réparation fuite d'eau" class="rounded-img" />
+        </div>
+        <div class="service-info">
+          <h2>Plomberie Générale & Réparations</h2>
+          <p>Notre équipe de plombiers qualifiés intervient pour tous vos travaux de plomberie, de la simple réparation de fuite au remplacement complet d'installations.</p>
+          <ul>
+            <li>Réparation de fuites d'eau apparentes ou encastrées</li>
+            <li>Remplacement de robinetterie</li>
+            <li>Installation de sanitaires (WC, lavabos, douches)</li>
+            <li>Réparation et entretien de chauffe-eau</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section text-center">
+    <div class="container">
+      <h2>Besoin d'une <span class="highlight">Intervention Rapide</span> ?</h2>
+      <p>Nos techniciens sont prêts à intervenir chez vous.</p>
+      <div class="cta-buttons">
+        <a href="tel:+32000000000" class="btn btn-primary btn-large">Appeler le +32 00 000 00 00</a>
+        <a href="/contact" class="btn btn-secondary btn-large">Prendre Rendez-vous</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--color-background-alt);
+    padding: 6rem 2rem 4rem;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .service-detail {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .service-detail.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .service-detail:last-child {
+    margin-bottom: 0;
+  }
+
+  .service-image, .service-info {
+    flex: 1;
+  }
+
+  .rounded-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+
+  .service-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-info p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .service-info ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-info ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+  }
+
+  .service-info ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, rgba(0, 68, 204, 0.05) 0%, rgba(0, 168, 255, 0.05) 100%);
+    padding: 5rem 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 992px) {
+    .service-detail, .service-detail.reverse {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2.5rem;
+    }
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
